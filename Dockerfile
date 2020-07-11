@@ -1,12 +1,6 @@
-FROM mysql:5.7
+FROM mysql:8
 CMD [ \
     "mysqld", \
-    "--user=root", \
-    "--verbose", \
-    "--skip-sync-frm", \
-    "--skip-log-bin", \
-    "--innodb-support-xa=0", \
-    "--bind-address=0.0.0.0", \
-    "--query-cache-type=1" \
+    "--bind-address=0.0.0.0" \
 ]
 ENV MYSQL_ROOT_PASSWORD root
